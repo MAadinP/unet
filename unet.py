@@ -148,4 +148,5 @@ class Unet(nn.Module):
         return output_tensor
 
 model = Unet()
-model.forward_pass(img_tensor)
+out = model.forward_pass(img_tensor)
+print(f"{out} \nOutput dim: {out.size()}")
